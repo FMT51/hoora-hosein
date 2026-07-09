@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'IranNastaliq';
+    src: url('fonts/IranNastaliq.ttf') format('truetype');
+}
 body{
     margin:0;
     font-family:Vazirmatn,sans-serif;
@@ -206,7 +210,12 @@ body{
     line-height:2;
     text-align:center;
 }
-
+.center,
+.quote,
+.text{
+    font-family: 'IranNastaliq';
+    line-height: 2.3;
+}
 .names{
     text-align:center;
     font-size:54px;
