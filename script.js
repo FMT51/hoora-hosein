@@ -149,3 +149,14 @@ console.log(document.getElementById("bgMusic"));
     isPlaying = !isPlaying;
 
 });
+// جلوگیری از کلیک راست
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});
+
+// جلوگیری از Drag عکس
+document.querySelectorAll("img").forEach(img=>{
+    img.addEventListener("dragstart", e=>{
+        e.preventDefault();
+    });
+});
