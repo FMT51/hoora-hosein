@@ -175,6 +175,13 @@ body{
     overflow-y: auto;
 }
 
+.gallery img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: auto;
+}
+
 .glass{
     width:85%;
     max-width:900px;
