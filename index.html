@@ -96,7 +96,10 @@
             <button class="btn" onclick="showGallery()">
                 گالری تصاویر
             </button>
-
+<button class="btn location-btn" onclick="showMapModal()">
+    <i class="fa-solid fa-location-dot"></i>
+    مسیریابی تالار
+</button>
         </div>
 
 
@@ -176,6 +179,31 @@
 <script src="script.js"></script>
 <div id="musicBtn">
     🎵
+</div>
+    <div id="mapModal" class="map-modal">
 
+    <div class="map-box">
+
+        <h3>انتخاب برنامه مسیریابی</h3>
+
+        <button class="mapBtn balad" onclick="openBalad()">
+            🟢 بلد
+        </button>
+
+        <button class="mapBtn neshan" onclick="openNeshan()">
+            🔵 نشان
+        </button>
+
+        <button class="mapBtn google" onclick="openGoogle()">
+            🔴 Google Maps
+        </button>
+
+        <button class="closeMap" onclick="closeMap()">
+            انصراف
+        </button>
+
+    </div>
+
+</div>
 </body>
 </html>
