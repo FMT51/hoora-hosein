@@ -496,3 +496,150 @@ pointer-events: none;
 .gallery img:hover{
     transform:scale(1.05);
 }
+.map-modal{
+
+    position:fixed;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    background:rgba(0,0,0,.35);
+
+    z-index:9999;
+
+    animation:fadeIn .3s;
+
+}
+
+.map-box{
+
+    width:100%;
+    max-width:420px;
+
+    margin:20px;
+
+    padding:25px;
+
+    border-radius:28px 28px 0 0;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.16);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    text-align:center;
+
+    animation:slideUp .35s ease;
+
+}
+
+.map-box h3{
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+.mapBtn{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:8px 0;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+.balad{
+
+    background:#19b95c;
+
+    color:#fff;
+
+}
+
+.neshan{
+
+    background:#2f80ed;
+
+    color:#fff;
+
+}
+
+.google{
+
+    background:#ea4335;
+
+    color:#fff;
+
+}
+
+.closeMap{
+
+    margin-top:15px;
+
+    background:#777;
+
+    color:#fff;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+@keyframes slideUp{
+
+    from{
+
+        transform:translateY(100%);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
