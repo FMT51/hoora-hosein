@@ -181,15 +181,6 @@ function openBalad(){
 
 }
 
-function openNeshan(){
-
-    window.open(
-        "https://neshan.org/maps/@32.308708,50.894574,16z",
-        "_blank"
-    );
-
-}
-
 function openGoogle(){
 
     window.open(
