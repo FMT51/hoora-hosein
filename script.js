@@ -175,23 +175,26 @@ function closeMap(){
 function openBalad(){
 
     window.open(
-    "https://balad.ir/search/%D8%B4%D9%87%D8%B1%DA%A9%D8%B1%D8%AF%D8%8C%20%D9%85%DB%8C%D8%AF%D8%A7%D9%86%20%D9%85%D8%B9%D9%84%D9%85%D8%8C%20%D8%A8%D9%84%D9%88%D8%A7%D8%B1%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B1%D8%B6%D8%A7%D8%8C%20%D9%86%D8%A8%D8%B4%20%DA%A9%D9%88%DA%86%D9%87%20109",
-    "_blank");
+        "https://balad.ir/p/32.308708,50.894574",
+        "_blank"
+    );
 
 }
 
 function openNeshan(){
 
     window.open(
-    "https://neshan.org/maps/search/شهرکرد میدان معلم بلوار امام رضا نبش کوچه ۱۰۹",
-    "_blank");
+        "https://neshan.org/maps/@32.308708,50.894574,16z",
+        "_blank"
+    );
 
 }
 
 function openGoogle(){
 
     window.open(
-    "https://maps.app.goo.gl/6tyickaU7pEntn8S8",
-    "_blank");
+        "https://www.google.com/maps/dir/?api=1&destination=32.308708,50.894574&travelmode=driving",
+        "_blank"
+    );
 
 }
