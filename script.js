@@ -4,11 +4,7 @@ const successTitle = document.getElementById("successTitle");
 const successText = document.getElementById("successText");
 const closeSuccess = document.getElementById("closeSuccess");
 
-if (closeSuccess) {
-    closeSuccess.onclick = () => {
-        successModal.style.display = "none";
-    };
-}
+
 const env = document.getElementById("env");
 const landing = document.getElementById("landing");
 const invite = document.getElementById("invite");
