@@ -252,4 +252,4 @@ successModal.style.display = "flex";
     .catch(() => {
         alert("خطا در ثبت اطلاعات");
     });
-});
+
