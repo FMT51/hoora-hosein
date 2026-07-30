@@ -228,18 +228,18 @@ document.getElementById("guestForm").addEventListener("submit", function(e) {
         })
     })
     .then(() => {
-       if(attendance === "yes"){
+       if(attendance.value === "yes"){
 
-    successTitle.innerHTML = "🌹";
+   // successTitle.innerHTML = "🌹";
 
-    successText.innerHTML =
+   // successText.innerHTML =
     "از ثبت حضور شما سپاسگزاریم.<br>مشتاق دیدار شما در جشن عروسی هستیم.";
 
 }else{
 
-    successTitle.innerHTML = "❤️";
+   // successTitle.innerHTML = "❤️";
 
-    successText.innerHTML =
+   // successText.innerHTML =
     "از اینکه پاسخ خود را ثبت کردید سپاسگزاریم.<br>امیدواریم در فرصتی دیگر دیدار کنیم.";
 
 }
