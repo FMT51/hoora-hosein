@@ -1,3 +1,12 @@
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwbp_4zKMlp_sx0lHekS-YrhFonZZ7IeiPhjfnefpULM0xYKObbTaHeaMH4bBqShKXsYw/exec";
+const successModal = document.getElementById("successModal");
+const successTitle = document.getElementById("successTitle");
+const successText = document.getElementById("successText");
+const closeSuccess = document.getElementById("closeSuccess");
+
+closeSuccess.onclick = () => {
+    successModal.style.display = "none";
+};
 const env = document.getElementById("env");
 const landing = document.getElementById("landing");
 const invite = document.getElementById("invite");
@@ -221,8 +230,24 @@ document.getElementById("guestForm").addEventListener("submit", function(e) {
         })
     })
     .then(() => {
-        alert("🌹.از ثبت حضور شما سپاسگزاریم. مشتاق دیدار شما در جشن عروسی هستیم");
-        document.getElementById("guestForm").reset();
+       if(attendance === "yes"){
+
+    successTitle.innerHTML = "🌹";
+
+    successText.innerHTML =
+    "از ثبت حضور شما سپاسگزاریم.<br>مشتاق دیدار شما در جشن عروسی هستیم.";
+
+}else{
+
+    successTitle.innerHTML = "❤️";
+
+    successText.innerHTML =
+    "از اینکه پاسخ خود را ثبت کردید سپاسگزاریم.<br>امیدواریم در فرصتی دیگر دیدار کنیم.";
+
+}
+
+successModal.style.display = "flex";
+        //document.getElementById("guestForm").reset();
     })
     .catch(() => {
         alert("خطا در ثبت اطلاعات");
