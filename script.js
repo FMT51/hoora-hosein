@@ -189,3 +189,42 @@ function openGoogle(){
     );
 
 }
+const scriptURL = "https://script.google.com/macros/s/AKfycbwbp_4zKMlp_sx0lHekS-YrhFonZZ7IeiPhjfnefpULM0xYKObbTaHeaMH4bBqShKXsYw/exec";
+
+document.getElementById("guestForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const attendance = document.querySelector('input[name="attendance"]:checked');
+
+    if (!attendance) {
+        alert("لطفاً وضعیت حضور را انتخاب کنید.");
+        return;
+    }
+
+    if (attendance.value === "yes") {
+        if (
+            document.getElementById("phone").value === "" ||
+            document.getElementById("count").value === ""
+        ) {
+            alert("لطفاً تمام اطلاعات را کامل کنید.");
+            return;
+        }
+    }
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify({
+            fullName: document.getElementById("fullName").value,
+            phone: document.getElementById("phone").value,
+            count: document.getElementById("count").value,
+            attendance: attendance.value
+        })
+    })
+    .then(() => {
+        alert("🌹.از ثبت حضور شما سپاسگزاریم. مشتاق دیدار شما در جشن عروسی هستیم");
+        document.getElementById("guestForm").reset();
+    })
+    .catch(() => {
+        alert("خطا در ثبت اطلاعات");
+    });
+});
