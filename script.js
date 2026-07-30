@@ -1,8 +1,8 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwbp_4zKMlp_sx0lHekS-YrhFonZZ7IeiPhjfnefpULM0xYKObbTaHeaMH4bBqShKXsYw/exec";
-const successModal = document.getElementById("successModal");
-const successTitle = document.getElementById("successTitle");
-const successText = document.getElementById("successText");
-const closeSuccess = document.getElementById("closeSuccess");
+//const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwbp_4zKMlp_sx0lHekS-YrhFonZZ7IeiPhjfnefpULM0xYKObbTaHeaMH4bBqShKXsYw/exec";
+//const successModal = document.getElementById("successModal");
+//const successTitle = document.getElementById("successTitle");
+//const successText = document.getElementById("successText");
+//const closeSuccess = document.getElementById("closeSuccess");
 
 
 const env = document.getElementById("env");
