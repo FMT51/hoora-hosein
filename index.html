@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invitation card Hoora&Hosein</title>
+
+    <link rel="stylesheet" href="Style.css">
+
+    <link href="C:\Users\sh\Desktop\arosi\Style.Css" rel="stylesheet">
+    
+</head>
+<body>
+
+<div id="landing">
+
+<div class="envelope" id="env">
+
+    <div class="back"></div>
+
+    <div class="seal" id="seal">♥</div>
+
+    <div class="flap"></div>
+
+    <div class="front"></div>
+
+</div>
+<div class="envelope-text">
+    دعوت نامه مراسم ازدواج
+</div>
+
+</div>
+<div id="invite">
+
+    <div class="glass">
+        <div class="video-container">
+
+    <video autoplay muted loop playsinline>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+</div>
+
+        <h2 class="center">به نام خداوند عشق</h2>
+
+        <p class="quote">
+            «تو آمدی و تمامِ جهانم رنگ دیگری گرفت،
+            انگار تمامِ راه‌های نرفته به تو ختم می‌شد...»
+        </p>
+
+        <p class="text">
+            اکنون که دست‌های ما به مهر در هم گره خورده و فصل تازه‌ای از زندگی‌مان آغاز شده است،
+            از شما عزیزان دعوت می‌کنیم در جشن وصال ما حضور داشته باشید و شادی این لحظه را با ما سهیم شوید.
+        </p>
+
+        <div class="names">
+    Hoora
+    <br>
+    ♥
+    <br>
+    Hosein
+</div>
+
+        <h3 class="center">📅 ۲۵ مرداد ۱۴۰۵</h3>
+        <h3 class="center">⏰ ساعت 18:00 تا 24:00</h3>
+        <h3 class="center">📍 شهرکرد - تالار کلبه</h3>
+
+        <div class="count">
+
+            <div class="box">
+                <div id="d" class="num">0</div>
+                روز
+            </div>
+
+            <div class="box">
+                <div id="h" class="num">0</div>
+                ساعت
+            </div>
+
+
+            <div class="box">
+                <div id="m" class="num">0</div>
+                دقیقه
+            </div>
+
+            <div class="box">
+                <div id="s" class="num">0</div>
+                ثانیه
+            </div>
+
+        </div>
+        <h2 class="text">باشد که این هم آوایی روح ها آغاز جاودانگی عشق باشد</h2>
+
+
+</section>
+
+        <div class="center">
+
+            <button class="btn" onclick="showGallery()">
+    گالری تصاویر
+</button>
+
+<button class="btn" onclick="showMapModal()">
+    📍 مسیریابی تالار
+</button>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div id="galleryPage">
+
+    <div class="glass">
+
+        <h1 class="center">
+            گالری Hoora & Hosein
+        </h1>
+
+        <div class="gallery">
+
+            <img src="images/1.jpg"
+     draggable="false"
+     oncontextmenu="return false;"
+     ondragstart="return false;"
+     onselectstart="return false;">
+        <img src="images/2.jpg"
+     draggable="false"
+     oncontextmenu="return false;"
+     ondragstart="return false;"
+     onselectstart="return false;">
+       <img src="images/3.jpg"
+     draggable="false"
+     oncontextmenu="return false;"
+     ondragstart="return false;"
+     onselectstart="return false;">
+        <img src="images/4.jpg"
+     draggable="false"
+     oncontextmenu="return false;"
+     ondragstart="return false;"
+     onselectstart="return false;">
+        <img src="images/5.jpg"
+     draggable="false"
+     oncontextmenu="return false;"
+     ondragstart="return false;"
+     onselectstart="return false;">
+        <img src="images/6.jpg"
+     draggable="false"
+     oncontextmenu="return false;"
+     ondragstart="return false;"
+     onselectstart="return false;">
+
+        </div>
+
+
+        <div class="center">
+
+            <button class="btn" onclick="backHome()">
+                بازگشت
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="music-btn" id="musicBtn">
+    🎵
+</div>
+
+<audio id="music">
+    <source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+<script src="script.js"></script>
+<div id="musicBtn">
+    🎵
+</div>
+<!-- Success Modal -->
+<div id="successModal" class="success-modal">
+  <div class="success-box">
+
+    <h2 id="successTitle">🌹</h2>
+
+    <p id="successText">
+      از ثبت حضور شما سپاسگزاریم.
+      <br>
+      مشتاق دیدار شما در جشن عروسی هستیم.
+    </p>
+
+    <button id="closeSuccess">
+      بستن
+    </button>
+
+  </div>
+</div>
+<!-- پنل انتخاب مسیریابی -->
+<div class="map-modal" id="mapModal">
+
+    <div class="map-modal-card">
+
+        <button class="map-modal-close" id="closeMapModal">
+            ×
+        </button>
+
+        <div class="map-modal-icon">
+            📍
+        </div>
+
+        <h2>انتخاب برنامه مسیریابی</h2>
+
+        <p>
+            برنامه مورد نظر خود را انتخاب کنید
+        </p>
+
+        <div class="map-apps">
+
+            <a href="#" id="baladLink" class="map-app">
+                <span class="map-app-icon">🟢</span>
+                <span>بلد</span>
+            </a>
+
+            <a href="#" id="googleMapsLink" class="map-app">
+                <span class="map-app-icon">🔴</span>
+                <span>Google Maps</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+<div class="location-modal" id="locationModal">
+
+    <div class="location-card">
+
+        <h2>انتخاب برنامه مسیریابی</h2>
+
+        <a id="baladLink" target="_blank">🟢 بلد</a>
+
+        <a id="googleLink" target="_blank">🔴 Google Maps</a>
+
+        <button id="closeLocationModal">
+            بستن
+        </button>
+
+    </div>
+
+</div>
+</html>
