@@ -1,0 +1,1113 @@
+@font-face {
+    font-family: 'IranNastaliq';
+    src: url('fonts/IranNastaliq.ttf') format('truetype');
+}
+body{
+    margin:0;
+    font-family:Vazirmatn,sans-serif;
+
+    background-image:url("images/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    color:#fff;
+    overflow-x:hidden;
+}
+.names{
+    text-align:center;
+    font-family:'Great Vibes', cursive;
+    font-size:72px;
+    color:#f5f5f5;
+    line-height:1.4;
+}
+#landing{
+    position:relative;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+
+    background-image:url("images/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+}
+
+/* لایه تار و تیره روی عکس */
+#landing::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    backdrop-filter:blur(1px);
+    -webkit-backdrop-filter:blur(4px);
+
+    background:rgba(0,0,0,0.30);
+
+    z-index:1;
+}
+
+/* پاکت بالاتر از عکس */
+.envelope{
+    position:relative;
+    z-index:2;
+}
+
+.envelope{
+    width:420px;
+    height:250px;
+    position:relative;
+
+    cursor:pointer;
+}
+
+.back{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        145deg,
+        #56585a,
+        #383a3d
+    );
+
+    border-radius:16px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.3);
+
+}
+
+.front{
+    position:absolute;
+    bottom:0;
+    border-left:200px solid transparent;
+    border-right:200px solid transparent;
+    border-bottom:135px solid #75757a;
+    transform: translateY(-1px);
+}
+
+.flap{
+    position:absolute;
+    top:0;
+
+    border-left:200px solid transparent;
+    border-right:200px solid transparent;
+
+    border-top:135px solid #a3a3a8;
+
+    filter:drop-shadow(
+        0 5px 10px rgba(0,0,0,.2)
+    );
+
+    transform-origin:top;
+
+    transition:1.7s ease;
+    transform: translateY(1px);
+    
+}
+
+.letter{
+    position:absolute;
+    left:25px;
+    right:25px;
+    top:25px;
+    height:200px;
+    background:white;
+    color:#222;
+    border-radius:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    line-height:2;
+
+    font-weight:bold;
+    transition:1.8s;
+    .letter{
+    position:absolute;
+    left:25px;
+    right:25px;
+    top:25px;
+    height:200px;
+
+    background:rgba(255,255,255,0.95);
+
+    color:#222;
+
+    border-radius:14px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    line-height:2;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+    text-shadow:0 1px 2px rgba(255,255,255,.5);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+    transition:1.8s;
+}
+}
+
+.open .flap{
+    transform:rotateX(180deg);
+}
+
+.open .letter{
+    transform:translateY(-300px) scale(1.25);
+}
+
+#invite,
+#galleryPage{
+    display:none;
+    min-height:100vh;
+    padding:25px;
+    overflow-y: auto;
+}
+.gallery img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: auto;
+}
+
+.glass{
+    width:85%;
+    max-width:900px;
+
+    margin:auto;
+
+    padding:40px;
+
+    background:rgba(0,0,0,0.18);
+
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    border-radius:35px;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.15);
+
+    text-align:center;
+}
+.center{
+    text-align:center;
+}
+
+.quote{
+    text-align:center;
+    font-size:22px;
+}
+
+.text{
+    line-height:2;
+    text-align:center;
+}
+.center,
+.quote,
+.text{
+    font-family: 'IranNastaliq';
+    line-height: 2.3;
+}
+
+.names{
+    text-align:center;
+    font-size:54px;
+    margin:25px 0;
+}
+
+.count{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.box{
+    background:white;
+    color:#222;
+    padding:15px;
+    border-radius:16px;
+    min-width:90px;
+}
+
+.num{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 22px;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+}
+
+.music-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    cursor:pointer;
+    font-size:28px;
+}
+#musicBtn{
+    position:fixed;
+
+    bottom:20px;
+    right:20px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(8px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:28px;
+
+    color:white;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    transition:.3s;
+}
+
+#musicBtn:hover{
+    transform:scale(1.1);
+}
+
+.music-playing{
+    animation:spin 5s linear infinite;
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+.spin{
+    animation:spin 3s linear infinite;
+}
+
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+.envelope-text{
+    position:absolute;
+    bottom:-150px;
+
+    width:100%;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:20px;
+
+    line-height:2.2;
+
+    text-shadow:
+        0 0 10px rgba(0,0,0,.9),
+        0 0 20px rgba(0,0,0,.8);
+
+    z-index:10;
+    background:rgba(0,0,0,.25);
+
+    padding:12px;
+
+    border-radius:15px;
+
+    backdrop-filter:blur(5px);
+pointer-events: none;
+}
+.envelope{
+    width:420px;
+    height:240px;
+    position:relative;
+    transform: translateY(-80px);
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+.seal{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        #d4af37,
+        #9c7a2a
+    );
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:30px;
+
+    z-index:20;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.3);
+
+    transition:.5s;
+    pointer-events: none;
+}
+@keyframes breakSeal{
+
+    0%{
+        transform:translate(-50%,-50%) scale(1);
+        opacity:1;
+    }
+
+    30%{
+        transform:translate(-50%,-50%) scale(1.2) rotate(10deg);
+    }
+
+    60%{
+        transform:translate(-50%,-50%) scale(.8) rotate(-15deg);
+    }
+
+    100%{
+        transform:translate(-50%,-50%) scale(2);
+        opacity:0;
+    }
+
+}
+
+.break{
+    animation:breakSeal .8s forwards;
+}
+.video-container{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:0 auto 30px auto;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.3);
+}
+
+.video-container video{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:25px;
+}
+#galleryPage{
+    display:none;
+    width: 100%;
+    min-height:100vh;
+    padding:40px;
+    box-sizing: border-box;
+    text-align:center;
+    overflow-y: auto;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.gallery img{
+    width:100%;
+    height:auto;
+
+    border-radius:20px;
+
+    display: block;
+    object-fit: contain;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+/* ---------- Guest Form ---------- */
+
+.guest-form-section{
+    width:90%;
+    max-width:700px;
+    margin:60px auto;
+    padding:35px;
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.guest-form-section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#fff;
+    font-size:32px;
+    font-family:"IranNastaliq";
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    color:#fff;
+}
+
+.input-group input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    outline:none;
+    font-size:16px;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+}
+
+.input-group input::placeholder{
+    color:#ddd;
+}
+
+.attendance-box{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:30px 0;
+}
+
+.attendance-box input{
+    display:none;
+}
+
+.attendance-btn{
+
+    padding:15px 35px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    backdrop-filter:blur(15px);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-size:17px;
+
+    user-select:none;
+
+}
+
+.attendance-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+#yes:checked + .attendance-btn{
+
+    background:#3cb371;
+
+    border-color:#3cb371;
+
+    color:white;
+
+}
+
+#no:checked + .attendance-btn{
+
+    background:#d9534f;
+
+    border-color:#d9534f;
+
+    color:white;
+
+}
+
+.attendance-box label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+#guestForm button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:15px;
+
+    font-size:18px;
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#d4af37,#f7e08a);
+    color:#222;
+
+    transition:.3s;
+}
+
+#guestForm button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+/* ---------- Success Modal ---------- */
+
+.success-modal{
+    position:fixed;
+    inset:0;
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(8px);
+    z-index:99999;
+
+    animation:fadeIn .35s;
+}
+
+.success-box{
+
+    width:90%;
+    max-width:500px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.success-box h2{
+
+    font-family:"IranNastaliq";
+    font-size:48px;
+    margin-bottom:20px;
+
+}
+
+.success-box p{
+
+    font-size:20px;
+    line-height:2;
+
+}
+
+.success-box button{
+
+    margin-top:30px;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    background:linear-gradient(135deg,#d4af37,#f5d97c);
+
+    color:#222;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+/* ---------- Location Modal ---------- */
+
+.location-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    animation: locationFadeIn 0.3s ease;
+}
+
+.location-modal.active {
+    display: flex;
+}
+
+.location-card {
+    width: 90%;
+    max-width: 420px;
+
+    padding: 30px 25px;
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+
+    animation: locationCardIn 0.4s ease;
+}
+
+.location-card h2 {
+    margin: 0 0 25px;
+
+    color: #fff;
+
+    font-size: 24px;
+
+    font-family: "Vazirmatn", sans-serif;
+}
+
+.location-card a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 55px;
+
+    margin-bottom: 14px;
+
+    padding: 12px 18px;
+
+    box-sizing: border-box;
+
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.location-card a:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.22);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.location-card a:active {
+    transform: scale(0.97);
+}
+
+#closeLocationModal {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    color: #fff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+#closeLocationModal:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+/* ---------- Animations ---------- */
+
+@keyframes locationFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes locationCardIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    .location-card {
+        width: 100%;
+
+        max-width: 360px;
+
+        padding: 25px 20px;
+
+        border-radius: 24px;
+    }
+
+    .location-card h2 {
+        font-size: 21px;
+
+        margin-bottom: 20px;
+    }
+
+    .location-card a {
+        min-height: 52px;
+
+        font-size: 16px;
+    }
+
+}
+/* =========================
+   MAP MODAL
+========================= */
+
+.map-modal {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 99999;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.map-modal.active {
+    display: flex;
+}
+
+.map-modal-card {
+    position: relative;
+
+    width: 90%;
+    max-width: 400px;
+
+    padding: 32px 25px;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.13);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        inset 0 1px 1px rgba(255, 255, 255, 0.18);
+
+    animation: mapModalOpen 0.35s ease;
+}
+
+.map-modal-close {
+    position: absolute;
+
+    top: 12px;
+    left: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #fff;
+
+    font-size: 27px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.map-modal-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+
+    transform: rotate(90deg);
+}
+
+.map-modal-icon {
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+.map-modal-card h2 {
+    margin: 0 0 8px;
+
+    color: #fff;
+
+    font-size: 24px;
+}
+
+.map-modal-card p {
+    margin: 0 0 25px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 14px;
+}
+
+.map-apps {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.map-app {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 54px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.25s;
+}
+
+.map-app:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.22);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.map-app:active {
+    transform: scale(0.97);
+}
+
+.map-app-icon {
+    font-size: 20px;
+}
+
+@keyframes mapModalOpen {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .map-modal-card {
+        width: 100%;
+        max-width: 360px;
+
+        padding: 28px 20px;
+
+        border-radius: 25px;
+    }
+
+    .map-modal-card h2 {
+        font-size: 21px;
+    }
+
+    .map-app {
+        min-height: 52px;
+
+        font-size: 16px;
+    }
+
+}
